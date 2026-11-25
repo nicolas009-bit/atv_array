@@ -100,10 +100,10 @@ fnEstaNaLista(convidados, "Rafael")
 let estoque = ["Arroz", "Feijão", "Açúcar", "Café", "Sal"]
 
 function fnConsultaCorredor(estoque, item){
-    console.log((estoque.indexOf("Café") + 1));
     
     if(estoque.includes(item) == true){
         console.log("seu produto: "+item+" esta no estoque");
+        console.log("seu produto "+item+" esta na posição "+(estoque.indexOf(item) + 1));
         
     }
     else{
@@ -112,6 +112,34 @@ function fnConsultaCorredor(estoque, item){
     }
 }
 
-fnConsultaCorredor(estoque, "Macarrão")
+fnConsultaCorredor(estoque, "Café")
 
-//atv9
+// atv9
+
+let basePreco = [15.00,25.00,40.00]
+
+function fnAtualizarPreco(lista,indice,novoValor){
+    if((lista.length - 1) < indice){
+    lista[indice] = novoValor
+    }
+    console.log(`Novos valores de preços são: ${lista}`)
+    
+}
+
+
+fnAtualizarPreco(basePreco, 1,28.5)
+fnAtualizarPreco(basePreco, 2,48.5)
+fnAtualizarPreco(basePreco, 3,78.5)
+
+//atv10
+
+function fnCriarBoletim(nota1,nota2,nota3){
+    let notas = [nota1, nota2, nota3]
+
+    console.log(notas);
+    
+    
+}
+
+
+fnCriarBoletim(8.0,7.5,9.0)
